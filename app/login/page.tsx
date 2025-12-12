@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -53,6 +54,13 @@ export default function LoginPage() {
             Login
           </button>
         </form>
+
+        <Link
+          href='/register'
+          className='text-sm text-blue-500 mt-4 block text-center'
+        >
+          Don&apos;t have an account? Register
+        </Link>
       </div>
     </div>
   );
